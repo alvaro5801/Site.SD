@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Monitoramento de Nível de Água</title>
+     <!-- Link para o Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <nav>
+            <ul id="navigation-menu">
+                <li><a href="#main-container">Início</a></li>
+                <li><a href="#project-description">Descrição</a></li>
+                <li><a href="#project-goals">Aplivativos e Plataformas</a></li>
+                <li><a href="#materials-list">Materiais</a></li>
+                <li><a href="#esquema-conceitual">Esquema</a></li>
+                <li><a href="#palavras-chaves">Palavras</a></li>
+                <li><a href="#steps-section">Passo a Passo</a></li>
+                <li> <a href="#video-youtube"> Funcionamento </a></li>
+                <li> <a href="#visual-codigo"> Código </a></li>
+                <li><a href="#authors-section">Autores</a></li>
+                <li><a href="#problems-lessons">Problemas e Lições</a></li>
+        
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-container" class="container">
+        <h1><span>Reserva x</span>: Monitoramento de Nível de Água</h1>
+
+        <h2 id="project-description">Descrição do Projeto</h2>
+        <p>
+            Existem pessoas com reservatórios de água em casa (toneis, caixa d´água),
+            e que passam por problemas, como: transbordamento, verificação excessiva 
+            e difícilacesso a esses locais.  Devido a esses problemas, a ideia de
+            adotar um sistema que sanaria tais problemáticas começou a ser elaborada,
+            assim, sendo criado o "Reserva X". Temos como objetivo facilitar a vida daqueles
+            que fizerem uso do dispositivo, de forma que: o sensor indicaria o nível da água  através
+            da LED (0%,25%,50%,75%,100%) que  estiver acessa. Além disso, ela avisará por um  "bip"
+            quando o nível chegar a 100%. 
+        </p>
+
+        <h2 id="project-goals">Aplicativos e Plataformas utilizadas</h2>
+        <ul>
+            <li>Tinkcard - Versão Web</li>
+            <li>Arduino IDE - Versão 2.3.3</li>
+
+        </ul>
+
+        <h2 id="materials-list">Materiais Necessários</h2>
+        <ul>
+            <li>5 resistores de 180 ohms</li>
+            <li>5 transistores BC548</li>
+            <li>1 LED vermelho</li>
+            <li>2 LEDs amarelas</li>
+            <li>1 LED verde</li>
+            <li>1 Arduino Uno</li>
+            <li>Protoboard</li>
+            <li>1 Buzzer</li>
+            <li>jumprs</li>
+            <li>estanho</li>
+            <li>4 metros de fio laranja</li>
+            <li>2 metros de fio roxo</li>
+            <li>ferro de solda</li>
+            <li>fita isolante></li>
+            <li>tubo termo retrátil</li>
+            <li>esqueiro</li>
+            <li>fonte de 5 volts</li>
+        </ul>
+        
+
+        <h2 id="esquema-conceitual">Esquema conceitual</h2>
+        <img src="./img.projeto/Esquema conceitual.jpeg" alt="Esquema conceitual" class = "image-container">
+
+        <h2 id="palavras-chaves">Palavras Chaves</h2>
+        <ul>
+            <li>Monitoramento de água</li>
+            <li>Reservatório</li>
+            <li>Arduino</li>
+            <li>Automação</li>
+            <li>Controle de nível</li>
+        </ul>
+
+        <h2 id="steps-section">Passo a Passo da Montagem</h2>
+        <section id="step1">
+            <h3><span>Passo 1</span>: Soldagem de resistores e transistores</h3>
+            <p>Pegue um resistor e um transistor, e fazendo uso da solda, conecte um ao outro. Repita esse passo até que você tenha quatro peças iguais a da imagem abaixo:</p>
+            <div>
+                <img src="./img.projeto/passo1.1.png" alt="transistor e resistorconectados por solda"  class="step-container">
+            </div>
+        </section>
+        
+        <section id="step2">
+            <h3><span>Passo 2</span>:Desencapar fios</h3>
+            <p>Pegue um metro de fio de cada cor, e desemcape a metade do fio de ambas as cores. Nesse projeto, o roxo representará o fio negativo, e o laranja o fio positivo.</p>
+            <div>
+               <img src="./img.projeto/passo2.1.png" alt="Fio desemcapado"  class="step-container">
+            </div>
+        </section>
+
+        <section id="step3">
+            <h3><span>Passo 3</span>: Soldagem das peças nos fios</h3>
+            <p>Com o fio negativo já desencapado, pegue as peças feitas no "passo 1" e solde no fio negativo. Observação: utilizamos um tubo retrátil para marcar o fio negativo.</p>
+            <div>
+                <img src="./img.projeto/passo3.1.png" alt="Soldagem das peças no fio negativo"  class="step-container">
+            </div>
+        </section>
+
+        <section id="step4">
+            <h3><span>Passo 4</span>: Conexão no fio positivo</h3>
+            <p>Agora, pegue o fio positivo e fazendo uso da solda, conecte os resistores nele de acordo com a imagem:</p>
+            <div>
+                <img src="./img.projeto/passo 4.1.png" alt="resistores sendo conectados no fio positivo"  class="step-container">
+            </div>
+        </section>
+
+        <section id="step5">
+            <h3><span>Passo 5</span>:Fios dos níveis de Água</h3>
+            <p> Corte pedaços de fios laranja de acordo com o tamanho de cada nível, exemplo: 60cm para o que vai ficar no fundo do recipiente, 30cm para o que vai ficar na metade, etc... Ao total serão quatro fios. Após isso, conecte cada fio (desemcapado) na "perninha do meio" do transistor que representa cada nível. Foto demonstrativa: </p>
+            <div>
+              <img src="./img.projeto/passo5.1.png" alt="transistor e seus níveis de água"  class="step-container"> 
+            </div>
+        </section>
+
+        <section id="step6">
+            <h3><span>Passo 6</span>: Colocação dos LEDs</h3>
+            <p>Agora você colocará o LED que representa o nível do fio que ficará na água. A perna maior do led (positiva) será soldada pro lado que o resistor estiver, e a menor(negativa) pro lado do transistor. Depois disso, corte com o alicate no meio dessa conexão, assim como está sendo feita no led amarelo da imagem abaixo, tire todo o excesso até que fique como o led verde.</p>
+            <div>
+              <img src="./img.projeto/passo6.1.png" alt="LEDS sendo colocados"  class="step-container"> 
+            </div>
+        </section>
+
+        <section id="step7">
+            <h3><span>Passo 7</span>: Visualização prática</h3>
+            <p>Tendo feito o sexto passo, pegue o recipiente que vai ser utilizado e conecte os fios nos níveis de água (utilize fita isolante), mas antes disso, desencape um pouco as pontas que ficarão dentro dele.</p>
+            <div>
+              <img src="./img.projeto/passo7.1.png" alt=""  class="step-container"> 
+            </div>
+        </section>
+
+        <section id="step8">
+            <h3><span>Passo 8</span>: Fonte de alimentação</h3>
+            <p>Pegue uma fonte de 5 volts, desemcape o fio da fonte e separe a parte positiva e negativa. Pegue o projeto do jeito que está no passo 7. Sabendo que a outra metade desses fios não estão desemcapadas, desemcape apenas suas pontas e conecte com os fios da fonte (positivo com positivo e negativo com negativo). Apos isso, cubra toda essa parte com fita adesiva e tubo retrátil, use o esqueiro para diminuir o tamanho do tubo.</p>
+            <div>
+              <img src="./img.projeto/passo8.1.png" alt=""  class="step-container"> 
+            </div>
+        </section>
+
+        <section id="step9">
+            <h3><span>Passo 9</span>:Buzzer</h3>
+            <p>Por fim, conecte os fios do projeto na Protoboard, o Buzzer e ligue tudo a placa do Arduino (que ocorre através do jumprs). Para que quando o led 100% se ativar, a energia percorra pela placa e o buzz seja ativo.</p>
+            <div>
+              <img src="./img.projeto/passo9.1.png" alt=""  class="step-container"> 
+            </div>
+        </section>
+        
+        <section id="step10">
+            <h3><span>Passo 10</span>:Buzzer</h3>
+            <p>Após isso, faça a conexão na protoboard da seguinte forme. O buzzer será adicionado na protoboard, a perna positiva do buzzer ficará conectada na porta 13 do arduino (por meio do jumper); a perna negativa ficará conectada GDN digital, além disso, a perna conectada ao circuito vai na porta 11.</p>
+            <div>
+              <img src="img.projeto/passo10.jpeg" alt=""  class="step-container"> 
+            </div>
+        </section>
+
+        <h2 id="video-youtube">Entenda o funcionamento</h2>
+            <p>Aqui te mostramos o projeto em seu estado final, além de explicarmos sobre seu funcionamento, Aproveite o vídeo!</p>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="projeto.SD.mp4" title="Vídeo Passo 1" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+
+            <h2 id="visual-codigo">Código</h2>
+           <h3 > Arduino Code Snippet</h3>
+            <p>Partes importantes do Código</p>
+            
+
+            <pre><code>
+                const int BUZZER = 13;           // Definindo o pino 13 para o buzzer (alto-falante) conectado
+                const int OUTPUT_PORT = 11;      // Definindo o pino 11 para um dispositivo de entrada ou controle (como um botão ou sensor)
+
+                void setup() {
+                pinMode(BUZZER, OUTPUT);       // Configura o pino BUZZER como saída, já que o buzzer será controlado por ele
+                }
+
+                void loop() {
+                // A estrutura condicional verifica o estado do pino OUTPUT_PORT
+                // Se o pino OUTPUT_PORT estiver em LOW (baixo, 0V), o buzzer emite som
+                if (digitalRead(OUTPUT_PORT) == LOW) {
+                    tone(BUZZER, 1000);   // Emite um som no pino BUZZER a 1000 Hz
+                 delay(500);            // Espera 500 milissegundos antes de verificar novamente o estado do OUTPUT_PORT
+                    }
+    
+                // Caso o pino OUTPUT_PORT esteja em HIGH (alto, 5V), o buzzer é desativado
+                    else if (digitalRead(OUTPUT_PORT) == HIGH) {
+                    noTone(BUZZER);       // Desliga o buzzer (sem som)
+                    delay(500);            // Espera 500 milissegundos antes de verificar novamente o estado do OUTPUT_PORT
+                     }
+                }
+            </code></pre>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+            <p>Github: 
+              <a href="https://github.com/alvaro5801/Site.SD/blob/main/codigo%20arduino.c" target="_blank">
+                <i class="fab fa-github"></i> Ver código no Arduino
+              </a>
+            </p>
+            
+
+
+            <h2 id="authors-section">Autores</h2>
+            <div class="authors-grid">
+                <div class="author-box">
+                    <img src="./img.projeto/Álvaro.jfif" alt="Foto de Álvaro" class="author-photo">
+                    <h3>Álvaro Silva</h3>
+                    <p>Github: <a href="https://github.com/alvaro5801" target="_blank"><i class="fab fa-github"></i></a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/%C3%A1lvaro-silva/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+                    <p>Email: <a href="mailto:aas3@cesar.school">aas3@cesar.school</a></p>
+                </div>
+                <div class="author-box">
+                    <img src="./img.projeto/Icaro.jpeg" alt="Foto de Icaro" class="author-photo">
+                    <h3>Icaro Costa</h3>
+                    <p>Github: <a href="https://github.com/icaro-costa" target="_blank"><i class="fab fa-github"></i></a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/icaro-costa-ic/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+                    <p>Email: <a href="mailto:ilssc@cesar.school">ilssc@cesar.school</a></p>
+                </div>
+                <div class="author-box">
+                    <img src="./img.projeto/Thays.jpeg" alt="Foto de Thays" class="author-photo">
+                    <h3>Thays Barbosa</h3>
+                    <p>Github: <a href="https://github.com/idthy" target="_blank"><i class="fab fa-github"></i></a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/thays-barbosa-332683318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+                    <p>Email: <a href="mailto:tbsc@cesar.school">tbsc@cesar.school</a></p>
+                </div>
+                <div class="author-box">
+                    <img src="./img.projeto/Arthur.jpeg" alt="Foto de Arthur" class="author-photo">
+                    <h3>Arthur Estevão</h3>
+                    <p>Github: <a href="https://github.com/ArthurEstevaum" target="_blank"><i class="fab fa-github"></i></a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/arthur-estev%C3%A3o-304707260" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+                    <p>Email: <a href="mailto:aerl@cesar.school">aerl@cesar.school</a></p>
+                </div>
+            </div>   
+        
+        <h2 id="problems-lessons">Problemas Enfrentados e Lições Aprendidas</h2>
+        <section>
+            <h3>Principais Desafios Enfrentados</h3>           
+            
+            <ul>
+            <li><strong>1. Integração dos LEDs com o Arduino:</strong> 
+                Houve dificuldade na conexão dos LEDs aos resistores e ao Arduino, 
+                pois o cálculo dos valores exatos de resistores para evitar danos aos LEDs exigiu um ajuste fino. 
+                Solução: Utilizamos um multímetro para medir a corrente e ajustar a resistência conforme necessário.</li>
+            <li><strong>2. Configuração dos Níveis de Água:</strong> 
+                O sensor tinha sensibilidade limitada, e houve dificuldade em calibrá-lo. 
+                Solução: Implementamos uma rotina de calibração para garantir leituras mais precisas.</li>
+            </ul>
+           
+
+            <h3>Principais Lições Aprendidas</h3>
+            <ul>
+            <li><strong>1. Importância do Planejamento Prévio:</strong> 
+                            Planejar cada etapa foi essencial para minimizar problemas e economizar tempo.</li>
+            <li><strong>2. Resiliência e Trabalho em Equipe:</strong> 
+                            Trabalhar juntos e dividir tarefas foi crucial para superar os desafios.</li>
+             
+            </ul>
+        </section>
+
+
+        <a href="#" id="download-button" class="button">Download</a>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+</html>
