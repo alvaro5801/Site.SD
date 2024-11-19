@@ -22,7 +22,7 @@ button.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Caminho do arquivo e nome para download
-  const filePath = 'https://raw.githubusercontent.com/alvaro5801/site.sd/main/WhatsApp%20Video%202024-11-19%20at%2012.25.49.mp4' // Link de download direto
+  const filePath = 'https://raw.githubusercontent.com/alvaro5801/site.sd/main/projeto.SD.mp4' // Link de download direto
   const fileName = 'Video.mp4';
 
   // Seleciona o botão pelo ID
